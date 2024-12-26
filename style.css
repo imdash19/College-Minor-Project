@@ -1,0 +1,227 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    right: 25vw;
+    top: 23vh;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.search-section, .pnr-section, .train-number-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #000078;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #000078;
+}
+
+.history-section {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*Nav styling start*/
+
+nav{
+    top: 0;
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+nav img{
+    height: 6rem;
+    width: 11rem;
+}
+
+nav h3{
+    display: none;
+}
+
+nav a{
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000078;
+}
+
+#menu{
+    display: none;
+}
+
+#close{
+    display: none;
+    height: 26px;
+    margin-left: 40vw;
+    margin-top: 5vh;
+}
+
+#sidebar {
+    color: #000078;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 6vh;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#sidebar h4 a{
+    width: 100%;
+}
+
+
+#nav-part2{
+    display: flex;
+    gap: 1vw; 
+}
+
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid #000078;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000078;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000078;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: #000078;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a{
+    color: #fff;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(LocoMotive.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 100vh;
+}
+
+@media (max-width:600px) {
+    
+    nav{
+        padding: 8vw 5vw;
+        background-color: none;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    nav img{
+        transition: all ease 0.2s;
+        height: 7vh;
+        width: 140px;
+    }
+    
+    #nav-part2{
+        display: none;
+    }
+
+    nav #menu{
+        display: block;
+    }
+
+    nav #close{
+        display: block;
+    }
+
+    .search-section, .pnr-section, .train-number-section {
+        flex-direction: row;
+    }
+
+    input {
+        margin-bottom: 0;
+        margin-right: 10px;
+        flex: 1;
+    }
+
+    button {
+        flex-shrink: 0;
+    }
+
+    .container {
+        position: inherit;
+    }
+
+}

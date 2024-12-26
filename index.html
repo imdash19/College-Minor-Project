@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <title>Seat Availability</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="IRCTC-Logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <div id="main">
+
+        <!--Nav bar-->
+        <nav>
+
+            <img src="IRCTC-Logo.png" alt="logo">
+
+            <div id="sidebar">
+                <a href="#" id="close"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#000078"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+                <h4><a href="LogIn.html">Log In</a></h4>
+                <h4><a href="Booking.html">Book Ticket</a></h4>
+                <h4><a href="BookComplaint.html">Book Complains</a></h4>
+                <h4><a href="#">Help</a></h4>
+            </div>
+
+            <div id="nav-part2">
+                <h4><a href="LogIn.html">Log In</a></h4>
+                <h4><a href="Booking.html">Book Tickets</a></h4>
+                <h4><a href="BookComplaint.html">Book Complains</a></h4>
+                <h4><a href="#">Help</a></h4>
+            </div>
+            
+            <a href="#" id="menu"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000078"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+
+        </nav>
+
+        <main>
+
+            <div class="container">
+                <h1>Train Search</h1>
+                
+                <div class="search-section">
+                    <input type="text" id="fromStation" placeholder="From Station" />
+                    <input type="text" id="toStation" placeholder="To Station" />
+                    <button id="searchTrains">Search Trains</button>
+                </div>
+                
+                <div class="pnr-section">
+                    <input type="text" id="pnrNumber" placeholder="Check PNR Number" />
+                    <button id="checkPnr">Check PNR</button>
+                </div>
+                
+                <div class="train-number-section">
+                    <input type="text" id="trainNumber" placeholder="Check Train Number" />
+                    <button id="checkTrain">Check Train</button>
+                </div>
+                
+                <div class="history-section">
+                    <h2>Search History</h2>
+                    <ul id="searchHistory">
+                            
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+    
+    <div id="full-scr"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
